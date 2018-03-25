@@ -1,0 +1,27 @@
+<aura:component controller="SendImageEmail" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+ 
+    <aura:attribute name="message" type="String" default="none" />
+    <aura:attribute name="ImgSrc" type="String" default="none" />
+    
+    Helpful resources: 
+    <ul>
+        <li><a href='https://developer.salesforce.com/blogs/developer-relations/2015/11/create-lightning-component-drag-drop-profile-pictures.html'>https://developer.salesforce.com/blogs/developer-relations/2015/11/create-lightning-component-drag-drop-profile-pictures.html</a></li>
+<li><a href='https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref_lightning_input.htm'>https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref_lightning_input.htm</a></li>
+    </ul>
+    
+   <div class="slds-form-element"> 
+<div class="droparea" aura:id="fileInput" ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}" >
+    
+    <p align="center">Drop File Here!</p>
+    
+   <br/>
+    <br/>
+    <br/>
+    <br/>
+    </div> 
+    </div>
+<br/>
+    <b>ImgSrc:</b> {!v.ImgSrc}
+    <br/><br/><br/><br/>
+    <b>Result: {!v.message}</b>
+</aura:component>
